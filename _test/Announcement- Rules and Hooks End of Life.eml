@@ -1,0 +1,1386 @@
+Received: from SE2P216MB1555.KORP216.PROD.OUTLOOK.COM (2603:1096:101:2c::7) by
+ PU4P216MB1239.KORP216.PROD.OUTLOOK.COM with HTTPS; Tue, 16 May 2023 20:23:09
+ +0000
+Received: from BN9PR03CA0415.namprd03.prod.outlook.com (2603:10b6:408:111::30)
+ by SE2P216MB1555.KORP216.PROD.OUTLOOK.COM (2603:1096:101:2c::7) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6387.34; Tue, 16 May
+ 2023 20:23:07 +0000
+Received: from BN1NAM02FT045.eop-nam02.prod.protection.outlook.com
+ (2603:10b6:408:111:cafe::66) by BN9PR03CA0415.outlook.office365.com
+ (2603:10b6:408:111::30) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6387.33 via Frontend
+ Transport; Tue, 16 May 2023 20:23:05 +0000
+Authentication-Results: spf=pass (sender IP is 199.15.212.91)
+ smtp.mailfrom=m.auth0.com; dkim=pass (signature was verified)
+ header.d=auth0.com;dmarc=pass action=none header.from=auth0.com;compauth=pass
+ reason=100
+Received-SPF: Pass (protection.outlook.com: domain of m.auth0.com designates
+ 199.15.212.91 as permitted sender) receiver=protection.outlook.com;
+ client-ip=199.15.212.91; helo=m.auth0.com; pr=C
+Received: from m.auth0.com (199.15.212.91) by
+ BN1NAM02FT045.mail.protection.outlook.com (10.13.2.156) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.6411.15 via Frontend Transport; Tue, 16 May 2023 20:23:05 +0000
+X-IncomingTopHeaderMarker:
+ OriginalChecksum:806425BB8B06A834CD64A7DC603E22DF9A4A1D7F75D36C677FEA6BC87DDBBFE0;UpperCasedChecksum:34219FF18137B06C4BC1B640E7A23D00A818785599773D65DD3A1DB5EF789869;SizeAsReceived:1755;Count:17
+X-MSFBL: FhoZKIhlMlxs7SmI4dGPS9l1nZjFLob2wMIG6LOS6uU=|eyJnIjoiYmctYWJkLTE
+	2OCIsImIiOiJkdnAtMTk5LTE1LTIxMi05MSIsInIiOiJsdWtlLnNhbmRzQG91dGx
+	vb2suY29tIiwidSI6Ijg1NS1RQUgtNjk5OjA6NTgwODA6MzQ1Njc4OjE3NTUyNjM
+	6NTUwNDc6OToxOTk0Njg4OjUxMTY5MzAzIn0=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1684268579;
+	s=m1; d=auth0.com; i=@auth0.com;
+	h=Content-Type:MIME-Version:Subject:To:From:Date;
+	bh=+8unEIQWm5ZOre1NJ4878koRpzn6CQty0VNQGMk6+iA=;
+	b=UkdgKg1f7OITteisUHD4DyrUQTXovMSaFDeGUr/Y6gH53YutWn5kWaMqrNpdZQGt
+	vKb86abnAWheRHLhAfiff+yeaJXEOAz/qSGQuvt5zlZZTqDzDiMgI1LKPWcvU88wHhf
+	q1TFoSUNGft9rRFCjIr6HtlriXDA1tScex2KtlEs=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1684268579;
+	s=m1; d=mktdns.com; i=@mktdns.com;
+	h=Content-Type:MIME-Version:Subject:To:From:Date;
+	bh=+8unEIQWm5ZOre1NJ4878koRpzn6CQty0VNQGMk6+iA=;
+	b=RrnBgyvlnXhHZtYZQy86AJDrXUZsjojLnMBPwluESkxDcbJVGN6xqxhhe0cbLyuJ
+	VqiPvfGc38UOmrVT5hCGTWyBrz04oT7/ynIS5tA2+VK9JqOwKAfLuCaqxhQtwhQm03O
+	732xdCgUqohJRIZf+75IaOXWnSYDb5j6t1DqLKv0=
+Date: Tue, 16 May 2023 15:22:59 -0500 (CDT)
+From: Auth0 by Okta Support Team <no-reply-support@auth0.com>
+Reply-To: no-reply-support@auth0.com
+To: luke.sands@outlook.com
+Message-ID: <1864685992.47734320.1684268579111@abmktmail-batch1e.marketo.org>
+Subject: Announcement: Rules and Hooks End of Life
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_47734319_2003575332.1684268579110"
+X-Binding: bg-abd-168
+X-MarketoID: 855-QAH-699:0:58080:345678:1755263:55047:9:1994688:51169303
+X-Mailfrom: 855-QAH-699.0.1994688.0.0.55047.9.51169303@m.auth0.com
+X-MktArchive: false
+X-MSYS-API: {"options":{"open_tracking":false,"click_tracking":false}}
+X-MktMailDKIM: true
+X-IncomingHeaderCount: 17
+Return-Path: 855-QAH-699.0.1994688.0.0.55047.9.51169303@m.auth0.com
+X-MS-Exchange-Organization-ExpirationStartTime: 16 May 2023 20:23:05.7141
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 33e8a18f-0f9c-49ca-9276-08db564b5b49
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ BN1NAM02FT045:EE_|SE2P216MB1555:EE_|PU4P216MB1239:EE_
+X-MS-Exchange-Organization-AuthSource:
+ BN1NAM02FT045.eop-nam02.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-UserLastLogonTime: 5/16/2023 7:26:20 PM
+X-MS-Office365-Filtering-Correlation-Id: 33e8a18f-0f9c-49ca-9276-08db564b5b49
+X-MS-Exchange-EOPDirect: true
+X-Sender-IP: 199.15.212.91
+X-SID-PRA: NO-REPLY-SUPPORT@AUTH0.COM
+X-SID-Result: PASS
+X-MS-Exchange-Organization-PCL: 2
+X-MS-Exchange-AtpMessageProperties: SA
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:4;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 16 May 2023 20:23:05.6516
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 33e8a18f-0f9c-49ca-9276-08db564b5b49
+X-MS-Exchange-CrossTenant-Id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-AuthSource:
+ BN1NAM02FT045.eop-nam02.prod.protection.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg:
+ 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SE2P216MB1555
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.8481580
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.6387.034
+X-Microsoft-Antispam-Mailbox-Delivery:
+	abwl:0;wl:0;pcwl:0;kl:0;dwl:0;dkl:0;rwl:0;ucf:0;jmr:0;ex:0;auth:1;dest:I;ENG:(5062000305)(90000117)(90005022)(91005020)(91035115)(9050020)(9100338)(2008001134)(2008121020)(4810010)(4910033)(8820095)(9575002)(10195002)(9320005);
+X-Message-Info:
+	qZelhIiYnPnSI46HAgAByTvcwIWG0Q5doBX4oJipylEnJFa6brManhQatchxgaLD9dKTtmeoKH2LZESXU23dz4CmZse2yokkM8o6haJKb/9G4badoNdy9KX6ioKtFAB/aqEGDGmA0eR5fwcXp78rP3jRhJkgb0/qdtvt+rpVO9oRXTPXKuLLp1jLgCl31bOK81QfJHwjlp3qOnAlDBXfAw==
+X-Message-Delivery: Vj0xLjE7dXM9MDtsPTA7YT0wO0Q9MTtHRD0xO1NDTD0z
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?dUJIYzhESkovclFyRU9zNEh4T1VaeXMzZERuc3Q5c0MyVWtrTjZZUzhTY0dt?=
+ =?utf-8?B?SWc1RmkzKytpVDVNemViMlAzeEh0L2FOWG9LY0VkWWRzV2J2dklFOWdFSnBF?=
+ =?utf-8?B?bndtQ3BKRUNxSnpqR1FoREQ3b0pSNHM0WEE0R1FsWmNrcDl3N21nVGpVaGhj?=
+ =?utf-8?B?cVA2TGNuK3BmNVQvOWhXNmRhQjZuNFhyL3BCaGxFODNSQk5LajJCVjZHWVNH?=
+ =?utf-8?B?Mk5uaGZUSTIyMEViQ01HcGo0NlZqK0xLNktkcDAvZ3hDSTdiK2plMTFKb1Nv?=
+ =?utf-8?B?TE1JcHl1UFYraDE0RGtVclM0cTJBWEVVakZiYkxoOXNXUjB6UkVzaDFPUlpX?=
+ =?utf-8?B?MHFobE9FV00rNXRvQlQ4cHp2V2ZFamxoakUyajZWbHp3bmd1ektRdHNGeElI?=
+ =?utf-8?B?ZndkdDh1S2R3THRSZTRtQ2M2OEk4Q3pmNm5aS2xJVlRhazgzeEpuNVptOUFY?=
+ =?utf-8?B?WFpBM1NvV1VlRkswRG1MaU9QNCtBdEJmWUE5Wk81ZHkrREc0ZE5taGFIZTlq?=
+ =?utf-8?B?RXJTSU5yZHppcm1YS1J3aG1TdjBCQ2szQnpZSnBWQ2xqa2IrcjZFNHlHeHVq?=
+ =?utf-8?B?end6QVdwWUNnR2JrVmlhVWVzT3hpaUF2Ulc4aFNYeTk2L1p3V2VMVkRoWldK?=
+ =?utf-8?B?VjB3QisxbWtEeVBLeitsWWZXU1pNYTY5bWNTaGs4MFh1eGZzNzZIUjA2V1J3?=
+ =?utf-8?B?Sk1OZkRuS2F0eFRhYjVKck5HWC84c1lwSVc0dVRtTm1FQ1FrS1VWSlBJdnFs?=
+ =?utf-8?B?eCtMVnk0N2lnMS92NlpIcG5QRXhrdFZxK2s3SGdZcHNZbis0akd2WmFMVEdV?=
+ =?utf-8?B?cCs3M3hvMWI4RGEyRm54b2NHaG16NUpOUHB5Rk1jQlFFaFZqM1J4cHROdlpS?=
+ =?utf-8?B?QWl2VkpWKzIrR0c3TkpzVnVld1hZR1RPbm0yWHIzckhUUzBlSzJWbXZBcEZF?=
+ =?utf-8?B?SENNMENqU1l4bXBnVHEvTGN2Y3l2aDFHSzRBeWxUdG05UE5OZ2xCRENnTm5k?=
+ =?utf-8?B?OGUzUTlNY2xHL282UENTRWl0eWZjWFVpTys4UmQxbmw3SXc2cE9scGZRTGdN?=
+ =?utf-8?B?Qzk1TkRleGUyT2lycUhGRFh0ZC9kalJhZ0ZsWFcwTnFRZXhwYm5vRkpYclBm?=
+ =?utf-8?B?cEhnbjZkMFF0U1ljZ1N5OU5hTVdHUk11Ui9JeFdIbUt2dHFhVEJLMEVCL09L?=
+ =?utf-8?B?RHhEZVd5Q0I1em45UUkvb2xrbytqbG9KRHJOQmk5MXFXQ0t1czlhc1EvNW01?=
+ =?utf-8?B?eldscXF5Qlc5dVhkK2FRdlBhalZjYm95VEI4dENtSThrYVlpOXZYb1FBUElu?=
+ =?utf-8?B?a0xxdnN1UmpNVFBIcUw1Q1NFUjA1Nm5pS0RpWGVwd2NKZXhPQ3NZb2swTjhT?=
+ =?utf-8?B?Unc0UEF4Nnk3QjFYTUVBNHovQmlsVjYzYWR3UnJWaHpvUFFzTDZDQ3RGK0RB?=
+ =?utf-8?B?NW9HSVVtK3ZhR1NTb0E2UjdvTy9ZTjFJVUR1ald5TkZFekhlRFlOdUg3QkV3?=
+ =?utf-8?B?NjlsQjBHY1dEZWs0c0wzMmQvcW1MSEtzQlZXaDE0UEZ4cDhyWms0ZER0YXBL?=
+ =?utf-8?B?bFdVaWlIam1ScFdDL3dpb0ZSTE1JWmJnenpmb2c3Y0UyYU1meStVZmxvVmhh?=
+ =?utf-8?B?MzRGdkVTdkRKY1JNdlZkQjFEYzE1NS80Nmk5Q3FhVld0QUhDcDU3WnUybjgz?=
+ =?utf-8?B?ZVlKdmRBRmkxNDNmOVJEc2llT25uSDJQM0NlTnlKb1RHazAwMi9naXM4djB5?=
+ =?utf-8?B?Yi90dUtEM0lMajN4d0FMZlUraFZlTmhXQWcrSDk4UnhDdlJ0TFByZFF2TU9Z?=
+ =?utf-8?B?cDlxQVZieG9nN1VtOFUzWFJxcVZDRVB3cURlU0h6MWlUMjN4c3VnK2F5NjV3?=
+ =?utf-8?B?NUZ2NEYwNkUwSU1GKzlhaDZONlpPQlhGTUFvZkJGSVgrd1lUTWpuL3U1T1JR?=
+ =?utf-8?B?TVhQZWFzUHhPV0M0M0VkTysxcFk1VjVCaXJRRFpEZE5oS3FTb0lBVHQyTmRn?=
+ =?utf-8?B?WlFJU2d5OVExOVNKdUVNdUlFTkJUc1J0S2tuejNaRGxMUmpoZmpBaFAwQjh3?=
+ =?utf-8?B?ZkFXd21UZ1dzK3d0WFI3NmdXci9ETWxIYTVUTXJIak03V05sdjlieW5KZ05L?=
+ =?utf-8?Q?wu5g=3D?=
+MIME-Version: 1.0
+
+------=_Part_47734319_2003575332.1684268579110
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Announcement: Rules and Hooks End of Life
+
+What is changing?
+
+Over the course of the next 18 months, we will be winding down support for =
+Rules and Hooks in our products and navigating all customers to use Actions=
+ as the main place for customization and extensibility. Rules and Hooks wil=
+l continue to receive full maintenance support until end of life, however, =
+no new functionality will be introduced. The=C2=A0End of Life (EOL) date fo=
+r Rules and Hooks will be November 18, 2024. Please note that there are no =
+immediate changes that will affect existing customers.=C2=A0
+
+We are giving you advance notice of these upcoming deprecations now, and pr=
+oviding an extended migration window, to make this transition as smooth as =
+possible. Separate deprecations for Rules and Hooks will begin over the nex=
+t few months (Actions will achieve parity with Rules prior to changes to an=
+y tenants, and is already at parity with Hooks), and we will provide more d=
+etails about each of them once the deprecations begin.=C2=A0
+
+We also encourage you to read the product team=E2=80=99s Preparing for Rule=
+s and Hooks End of Life <https://explore.okta.com/dc/aExPLSRIXGI15KncTzKWh5=
+BD-4eFUWIqxSjGJ6g60NlD7axqYMRw8s2g8SKdosn0p0OeADbuYkE9tJZyTNPyvLQ8HXIzjpDwA=
+RpWyiQXyC0ZGtxZ8bD6se521o2NOBvNCG9UCEIa8MHemvQtiJkZtAAT2dKsNqALcUrsjv8afs2K=
+XoW-GaBVfqEOSzKYsFo9Ir1h5CUQy32F8ej5_OkGgA=3D=3D/ODU1LVFBSC02OTkAAAGLxTOpHf=
+D-k3pH4inpjlLulZYN4midEJ7HdOp0F1FPM8k5_un4OPIIIkt_48osbvJ0mNvTwAU=3D> blog =
+post for additional insight.
+
+Why are we making this change?
+
+In order to improve our extensibility offering, we are deprecating Rules an=
+d Hooks. We are focusing our attention on Actions as a unified extensibilit=
+y product for developers and we will continue to add more features and func=
+tionality to Actions. We recognize the value Rules and Hooks have provided =
+over the years, and we know that it will take some time to migrate existing=
+ Rules and Hooks to Actions; because of this we are extending our migration=
+ deprecation window through November 18, 2024. We want to make this transit=
+ion as smooth as possible
+
+How are you affected?
+
+If you are currently using Rules and/or Hooks, please make plans to migrate=
+ to Actions prior to the EOL date of November 18, 2024. Please see the reso=
+urces below to aid in your migration planning.
+
+Beginning on October 16, 2023, Rules and Hooks functionality will not be pr=
+esent in newly-created tenants. Any tenants created before this date will c=
+ontinue to have access to Rules and Hooks until the EOL date of November 18=
+, 2024.
+
+What action do you need to take?
+
+From today, we recommend you start building new extensibility use cases in =
+Actions and, if you are able, start migrating your existing Rules and Hooks=
+ to Actions. To help aid you in your migration, please review the below doc=
+uments:
+
+-Migrate from Rules to Actions <https://explore.okta.com/dc/aExPLSRIXGI15Kn=
+cTzKWh2qTrbBNeXzwOrKEmH-JR1IbIkczMWdElSF7vY4LV72ggZMM_ca1sQesQXBt-Nd1OkjILh=
+7sGiz4dmjw-2_0lwvAA5K0qi0xVufUG-E-9JxhEjVF-wKknyPmtJ81DQW88GRJ4QaYd7xOt9IfN=
+3YNS72rconmF3aH-294Zd_WUy2mTlPOyimnHAwv_dCr0WfJveG1lMS0SHDhjy01uoHOhIY=3D/O=
+DU1LVFBSC02OTkAAAGLxTOpHfD-k3pH4inpjlLulZYN4midEJ7HdOp0F1FPM8k5_un4OPIIIkt_=
+48osbvJ0mNvTwAU=3D>
+-Migrate from Hooks to Actions <https://explore.okta.com/dc/aExPLSRIXGI15Kn=
+cTzKWh2qTrbBNeXzwOrKEmH-JR1IbIkczMWdElSF7vY4LV72gXX2K60MWYQXuO5_w8YhnsZfwFR=
+c08bfKZyfaS-mGEiLxv2BHhHgGYLBLX4XWn3G5YERoRAOEJCVMPTEkGsHYGRm2GmvzmO-2PCiIB=
+6fnD3S2_EEZ68NPfkdU8EciIylSZXEMvyROYBpOgsUMwLIlAEjrWpe7BXWtPdDU_FAvWoU=3D/O=
+DU1LVFBSC02OTkAAAGLxTOpHfD-k3pH4inpjlLulZYN4midEJ7HdOp0F1FPM8k5_un4OPIIIkt_=
+48osbvJ0mNvTwAU=3D>
+
+As you begin transitioning to Actions, please let us know if you run into a=
+ny difficulties or blockers. We want to make this transition as easy as pos=
+sible.
+
+How can you get additional assistance?
+
+We are here to help. Contact us by using the Auth0 by Okta Support Center <=
+https://explore.okta.com/dc/IXa7a3qCNsfykCKMTv6sTB3jYSBDNjBDogYQKXVr1jYCtpZ=
+JZ2iT_iMI-zlrJt9fl8NlmSIuVzh-fZS1VY-htmhYdnkfz-92vPT-XOy19T1cU0kUtZSc5xSUqb=
+7xM8X5d_6C6eMUEjj2blpagkixQA=3D=3D/ODU1LVFBSC02OTkAAAGLxTOpHfD-k3pH4inpjlLu=
+lZYN4midEJ7HdOp0F1FPM8k5_un4OPIIIkt_48osbvJ0mNvTwAU=3D> or Auth0 by Okta Co=
+mmunity <https://explore.okta.com/dc/7lM4V2h3Ux1YIeo9OliDNbziXBla-EEK8KN968=
+xrtoR6_XSyIeawxb4wLZ3E7cF2ERPrrqv_RI32PlWLo5n6zXE8dprJnnKKC4uEpxBECE8rmieGX=
+eVSDkgN8I7Z1pXkTvf97VGLby0heqj6ygXPFg=3D=3D/ODU1LVFBSC02OTkAAAGLxTOpHfD-k3p=
+H4inpjlLulZYN4midEJ7HdOp0F1FPM8k5_un4OPIIIkt_48osbvJ0mNvTwAU=3D>.
+
+Useful Resources
+
+Preparing for Rules and Hooks End of Life <https://explore.okta.com/dc/aExP=
+LSRIXGI15KncTzKWh5BD-4eFUWIqxSjGJ6g60NlD7axqYMRw8s2g8SKdosn0p0OeADbuYkE9tJZ=
+yTNPyvLQ8HXIzjpDwARpWyiQXyC0ZGtxZ8bD6se521o2NOBvNCG9UCEIa8MHemvQtiJkZtAAT2d=
+KsNqALcUrsjv8afs2KXoW-GaBVfqEOSzKYsFo9Ir1h5CUQy32F8ej5_OkGgA=3D=3D/ODU1LVFB=
+SC02OTkAAAGLxTOpHfD-k3pH4inpjlLulZYN4midEJ7HdOp0F1FPM8k5_un4OPIIIkt_48osbvJ=
+0mNvTwAU=3D>
+
+Migrate from Rules to Actions <https://explore.okta.com/dc/aExPLSRIXGI15Knc=
+TzKWh2qTrbBNeXzwOrKEmH-JR1IbIkczMWdElSF7vY4LV72ggZMM_ca1sQesQXBt-Nd1OkjILh7=
+sGiz4dmjw-2_0lwvAA5K0qi0xVufUG-E-9JxhEjVF-wKknyPmtJ81DQW88GRJ4QaYd7xOt9IfN3=
+YNS72rconmF3aH-294Zd_WUy2mTlPOyimnHAwv_dCr0WfJveG1lMS0SHDhjy01uoHOhIY=3D/OD=
+U1LVFBSC02OTkAAAGLxTOpHfD-k3pH4inpjlLulZYN4midEJ7HdOp0F1FPM8k5_un4OPIIIkt_4=
+8osbvJ0mNvTwAU=3D>
+
+Migrate from Hooks to Actions <https://explore.okta.com/dc/aExPLSRIXGI15Knc=
+TzKWh2qTrbBNeXzwOrKEmH-JR1IbIkczMWdElSF7vY4LV72gXX2K60MWYQXuO5_w8YhnsZfwFRc=
+08bfKZyfaS-mGEiLxv2BHhHgGYLBLX4XWn3G5YERoRAOEJCVMPTEkGsHYGRm2GmvzmO-2PCiIB6=
+fnD3S2_EEZ68NPfkdU8EciIylSZXEMvyROYBpOgsUMwLIlAEjrWpe7BXWtPdDU_FAvWoU=3D/OD=
+U1LVFBSC02OTkAAAGLxTOpHfD-k3pH4inpjlLulZYN4midEJ7HdOp0F1FPM8k5_un4OPIIIkt_4=
+8osbvJ0mNvTwAU=3D>
+
+Community Post: Rules and Hooks nearing End of Life <https://explore.okta.c=
+om/dc/7lM4V2h3Ux1YIeo9OliDNbExz5MQsQaP6GOoKrc8wlwBsL2aDm9cqKsmyiINUeqvWqTrJ=
+YQ-kmqrHV9l5Q4W6PkFNbBs3ODPgGhdupAIpEH-06aNzztj55MktJWB2oc_j88CDFdNo9E1zyvV=
+x_YXFoRpPLPZn8Yc-8atfgZBoxS_gdCP_63WAIG_JwjzYWQmOpm7kDyzit1WJAl2li3Eqg=3D=
+=3D/ODU1LVFBSC02OTkAAAGLxTOpHfD-k3pH4inpjlLulZYN4midEJ7HdOp0F1FPM8k5_un4OPI=
+IIkt_48osbvJ0mNvTwAU=3D>
+
+
+This email was sent to luke.sands@outlook.com <https://explore.okta.com/dc/=
+mC32jVeDo-6qSxuj4QvPZ0vxGLnqC44FoD0g6yZN00A=3D/ODU1LVFBSC02OTkAAAGLxTOpHfD-=
+k3pH4inpjlLulZYN4midEJ7HdOp0F1FPM8k5_un4OPIIIkt_48osbvJ0mNvTwAU=3D>. You ar=
+e receiving this message because you are an administrator of an Auth0 by Ok=
+ta tenant, and we are required to send service notices to you. If you would=
+ like to unsubscribe separately from marketing emails, please visit our ema=
+il preference center <https://explore.okta.com/dc/7_HgQqnvjLvOv4B955s7cWKr4=
+XG_pXXQ4zy6lN8kCAV3F46m6A2GGTxeT7L50lHTbcQs62ly3aFeRT8o6bmTYVg-5724gNtmf75t=
+WlF-SQBmeI5CuALLjDnfH2KSmuPzy7ANAn8MUYqotwtFm3vwKDxlYFOi92PlqS3fs22B0kyMpQq=
+N4EcbDXhdX4KLANZYqnR7nZQAFmJmExUUKSUEqQ=3D=3D/ODU1LVFBSC02OTkAAAGLxTOpHfD-k=
+3pH4inpjlLulZYN4midEJ7HdOp0F1FPM8k5_un4OPIIIkt_48osbvJ0mNvTwAU=3D>.
+
+2023 Okta, Inc. All rights reserved.
+
+Privacy Policy --> https://explore.okta.com/ODU1LVFBSC02OTkAAAGLxTOpHVwf-PU=
+yEzrgtQMLc4pq6NhBxFjG-GEvSeJNeStaIj8XpyVpefZkUZh0P1KFX5dlCzw=3D
+Unsubscribe --> https://explore.okta.com/ODU1LVFBSC02OTkAAAGLxTOpHRIa376vHQ=
+1pJy8ABBlYreMd_S5UGRk-18maS4O2lrPcF6FsaDVz7Cl8j64OJCjgFl0=3D
+View as Webpage --> [[https://pages.okta.com/index.php/email/emailWebview?m=
+kt_tok=3DODU1LVFBSC02OTkAAAGLxTOpHaap0ySWkxr6zOb7IgyVg7CfAgFfJO0o5pU3HsDOZD=
+ixeLCMRPpMdGEmXs378GoWt6Whbal5hHIuTnXhyt9pzdD1a6L3pATozDCrv5rxzTlr&md_id=3D=
+55047]]
+
+
+<a href=3D
+"https://explore.okta.com/ODU1LVFBSC02OTkAAAGLxTOpHa0rAGmXRznJmohQoLCIVwdFo=
+iMuHLMQJwQrDc55_jvCUgGPkU8NLgc9lJL9qAqHTw0=3D" target=3D"_blank" style=3D"t=
+ext-decoration: none; color: #828282;"
+>Okta <strong>&nbsp;&bull;&nbsp;</strong> 100 1st St (6th floor) <strong>&n=
+bsp;&bull;&nbsp;</strong> San Francisco, CA 94105 <strong>&nbsp;&bull;&nbsp=
+;</strong> USA</a>
+
+------=_Part_47734319_2003575332.1684268579110
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns=3D"http://www.w3.org/1999/xht=
+ml" xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micros=
+oft-com:office:office"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">=20
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.=
+0">=20
+<meta content=3D"telephone=3Dno" name=3D"format-detection">=20
+<meta content=3D"date=3Dno" name=3D"format-detection">=20
+<meta content=3D"address=3Dno" name=3D"format-detection">=20
+<meta content=3D"email=3Dno" name=3D"format-detection">=20
+<!-- Dark Mode -->=20
+<meta name=3D"color-scheme" content=3D"light dark">=20
+<meta name=3D"supported-color-schemes" content=3D"light dark">=20
+<!-- Start of Marketo Variable Definitions -->=20
+<!-- PreHeader Text --> =20
+<!-- Brand Colors -->            =20
+<!-- Overall Padding -->        =20
+<!-- Title 3 -->     =20
+<!-- Title 5 -->    =20
+<!-- Title 6 -->   =20
+<!-- Title Alignment-->  =20
+<!-- Title Padding-->          =20
+<!-- Body 3-->       =20
+<!-- Body 4-->       =20
+<!-- Body 5-->       =20
+<!-- Body Alignment-->    =20
+<!-- Body Padding-->            =20
+<!-- Button Toggles -->      =20
+<!-- Button Font Size -->            =20
+<!-- Button Padding -->       =20
+<!-- Button 1 -->        =20
+<!-- Button 2 -->        =20
+<!-- Button 3 -->        =20
+<!-- Button 4, 5, and 6 -->       =20
+<!-- Background Images -->            =20
+<!-- Background Images - Outlook -->    =20
+<!-- Spacer -->    =20
+<!-- Speaker Module -->            =20
+<!-- Footer -->       =20
+<!-- Dev Code Block --> =20
+<style type=3D"text/css">
+         @font-face {
+         font-family: "Aeonik-Regular";
+         font-style: normal;
+         font-weight: 400;
+         src: url("https://pages.okta.com/rs/855-QAH-699/images/Aeonik-Regu=
+lar.otf") format("opentype");
+         }
+         @font-face {
+         font-family: "Aeonik-Medium";
+         font-style: normal;
+         font-weight: 400;
+         src: url("https://pages.okta.com/rs/855-QAH-699/images/Aeonik-Medi=
+um.otf") format("opentype");
+         }
+      </style>=20
+<style type=3D"text/css">
+         body {
+         font-family: 'Aeonik-Regular', Helvetica, sans-serif;"
+         }
+      </style>=20
+<style type=3D"text/css">
+         * {-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: g=
+rayscale;}
+         html, body {margin: 0; padding: 0;}
+         body {margin: 0 auto!important; padding: 0; font-family: 'Aeonik-R=
+egular', sans-serif; -webkit-text-size-adjust: 100%!important; -ms-text-siz=
+e-adjust: 100%!important; -webkit-font-smoothing: antialiased!important;}
+         .mktoText a, .mktoSnippet a, a:link, a:visited {color: #000; text-=
+decoration: none;}
+         a[x-apple-data-detectors] {color: inherit!important; text-decorati=
+on: none!important; font-size: inherit!important; font-family: inherit!impo=
+rtant; font-weight: inherit!important; line-height: inherit!important;}
+         .mktoText a {text-decoration:underline ;color: #3F59E4;}
+         img {border: 0!important; outline: none!important; max-width:100%;=
+ display: block;}
+         table {border-spacing: 0; mso-table-lspace: 0px; mso-table-rspace:=
+ 0px;}
+         th {margin: 0; padding: 0;font-weight: normal;}
+         div,td,a,span {mso-line-height-rule: exactly}
+         ul,ol {Margin-top:0; Margin-bottom:0; padding-left:32px;}
+         li {Margin-top:0; Margin-bottom:0;}
+         [owa] .col, .col {display: table-cell!important;}
+      	 #hyperlink {text-decoration:underline !important; color: #3F59E4 !i=
+mportant;} =20
+         @media screen and (max-width: 600px) {
+         .moblogo{ height: 40px !important;}
+         .moblogo1{ height: 30px !important;}
+         .fullwidth, .mobfullwidth{ width: 100% !important;}
+         .mobfullwidth1{ width: 100% !important; max-width:100% !important;=
+}
+         .padright0{ padding-right: 0px !important;}
+         .padleft0{ padding-left: 0px !important;}
+         .padright6{padding-right: 6px !important;}
+         .padtop0{ padding-top: 0px !important;}
+         .padbot0{ padding-bottom: 0px !important;}
+         .padtop8{ padding-top: 8px !important;}
+         .padbot8{ padding-bottom: 8px !important;}
+         .padtop16{ padding-top: 16px !important;}
+         .padleft16{padding-left: 16px !important;}
+         .padright16{padding-right: 16px !important;}
+         .padbot16{padding-bottom: 16px !important;}
+         .padbot20{ padding-bottom: 20px !important;}
+         .padtop24{padding-top: 24px !important;}
+         .padbot24{padding-bottom: 24px !important;}
+         .padtop32{padding-top: 32px !important;}
+         .padbot32{padding-bottom: 32px !important;}
+         .padtop40{padding-top: 40px !important;}
+         .padbot40{padding-bottom: 40px !important;}
+         .padtop56{padding-top: 56px !important;}
+         .padbot56{padding-bottom: 56px !important;}
+         .padbot72{padding-bottom: 72px !important;}
+         .title3{ font-size: 32px!important; line-height: 36px!important; l=
+etter-spacing: -1%!important;}
+         .title5{ font-size: 24px!important; line-height: 32px!important; t=
+ext-align: center !important;}
+         .title6{font-size: 20px!important; line-height: 27px!important; }
+         .title7{font-size: 20px!important; line-height: 26px!important; }
+         .body3{ font-size: 20px!important; line-height: 26px!important;}
+         .body4{ font-size: 16px!important; line-height: 22px!important;}
+         .button{ text-align: center;}
+         .marauto{ margin: 0 auto;}
+         .float{ float: left; display:inline-block;}
+         .center{text-align: center;}
+         .spkimg{ width: 48% !important; float: left; display:inline-block;=
+}
+         .spkimgfull{ width: 100% !important; float: left; display:inline-b=
+lock;}
+         .spkimg1{ width: 48% !important;}
+         .spkspace{ width: 2% !important; float: left; display:inline-block=
+;}
+         .spkfull{width: 100% !important; }
+         .sponwidth{ width: 143px !important; margin: auto;}
+         .sponpad{ padding:12px 0px !important;}
+         .disnone{ display: none !important;}
+         .block{ display: block !important;}
+         .smalllink{ font-size: 16px !important; line-height: 24px !importa=
+nt;}
+         .heightauto{ height: auto !important;}
+         .spk3colnm{ width: 48%;}
+         .border{ border-radius: 0px !important;}
+           td.bill_new {
+             padding: 56px 12px;
+           }
+           td.gutter_biil {
+             padding-left: 6px;
+             padding-right: 6px;
+           }
+         }
+         @media screen and (max-width: 500px) {
+         .sponwidth1{width: 143px !important; float: left; display:inline-b=
+lock;}
+         .spkspace1{ float: left; display:inline-block;}
+         .none{ display: none !important;}
+         .spkfull1{ width: 100% !important;}
+         .mobilewidth{ width: 308px !important;}
+         .mobilewidth1{ width: 143px !important; margin: auto;}
+         }
+          @media screen and (max-width: 480px) {
+                .Cust_Mark_img img{
+                    max-width: 100% !important;
+                    height: auto;=20
+                }
+              .title3 {
+                  font-size: 32px!important;
+                  line-height: 115%!important;
+                  letter-spacing:-1%
+               }
+    		}
+     =20
+         @media screen and (max-width: 420px) {
+         .fullwidthimage a img.desk{ display: none !important;}
+         .fullwidthimage a img.mob{ display: block !important; width: 100% =
+!important; height: auto !important; visibility: visible !important;}
+           =20
+         }
+         @media screen and (max-width: 360px) {
+         .padleft20{padding-left: 20px !important;}
+         .padright20{padding-right: 20px !important;}
+         .padleft10{padding-left: 10px !important;}
+         .padright10{padding-right: 10px !important;}
+         }    =20
+     =20
+      </style>=20
+<!--[if gte mso 9]>
+      <xml>
+         <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+         </o:OfficeDocumentSettings>
+      </xml>
+      <![endif]-->=20
+<!--[if (gte mso 9)|(IE)]>
+      <style type=3D"text/css">
+         li {text-indent:-1em; display:list-item; margin-left:-1em;}
+         a,p,span,div,td,table,div,.mktoText,.mktoSnippet {font-family:Aria=
+l, Helvetica, sans-serif !important;}
+      </style>
+      <![endif]-->=20
+</head>=20
+<body>=20
+<!--[if gte mso 9]>
+      <table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" style=3D"width:100%;padding-bottom: 20px; padding-top: 20px;" bgcolor=3D"=
+#eeeeee">
+         <tr>
+            <td>
+               <!--<![endif]-->=20
+<div style=3D"background-color:#D9D7D2; table-layout: fixed; -webkit-text-s=
+ize-adjust:100%; -ms-text-size-adjust:100%; width:100%; vertical-align:top;=
+ padding-bottom: 20px; padding-top: 20px;" class=3D"padtop0 padbot0">=20
+<div style=3D"display: none; font-size: 1px; line-height: 1px; max-height: =
+0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-fami=
+ly: Helvetica, Arial, sans-serif;">
+
+</div>
+<div style=3D"display: none; font-size: 1px; line-height: 1px; max-height: =
+0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-fami=
+ly: Helvetica, Arial, sans-serif;">
+ =E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp=
+;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp=
+;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp=
+;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp=
+;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp=
+;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp=
+;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp=
+;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp=
+;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp=
+;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp=
+;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp=
+;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp=
+;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp=
+;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp=
+;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp=
+; =E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbs=
+p;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbs=
+p;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbs=
+p;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbs=
+p;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbs=
+p;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbs=
+p;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbs=
+p;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbs=
+p;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbs=
+p;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbs=
+p;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbs=
+p;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbs=
+p;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbs=
+p;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbs=
+p;=20
+</div>
+<table class=3D"mob-full mktoContainer fullwidth" id=3D"mainTable" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"width:600px; overflow:v=
+isible; margin:0 auto; vertical-align:middle;" valign=3D"middle" align=3D"c=
+enter">
+<tr class=3D"mktoModule" id=3D"okta_auth0_logo">=20
+<td style=3D"background-color: #FFFEFA;border-radius: 20px 20px 0px 0px;" c=
+lass=3D"border">=20
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" styl=
+e=3D"min-width:100%;">=20
+<tbody>=20
+<tr>=20
+<td style=3D"padding-left:40px; padding-right: 40px;" class=3D"padleft16 pa=
+dright16">=20
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" styl=
+e=3D"min-width:100%;">=20
+<tbody>=20
+<tr>=20
+<td style=3D"padding-top:32px; padding-bottom: 32px;" class=3D"padtop24 pad=
+bot24">=20
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" styl=
+e=3D"min-width:100%;">=20
+<tbody>=20
+<tr>=20
+<td align=3D"left">=20
+<div class=3D"mktoImg" id=3D"top_auth0_logo" mktolockimgsize=3D"true" mktol=
+ockimgstyle=3D"true">=20
+<a href=3D"https://explore.okta.com/ODU1LVFBSC02OTkAAAGLxTOpHRkIEK0H2nucKeN=
+CiOu0R2VtfBYMbhwSJVO3jRisgRS_yGQMJ6jfzvtoyprrsU5kn4A=3D" target=3D"_blank">=
+<img class=3D"moblogo" src=3D"https://pages.okta.com/rs/855-QAH-699/images/=
+auth0_Okta.png" width=3D"auto" height=3D"48" alt=3D"Auth0 by Okta logo" sty=
+le=3D"width:auto; height:48px;"></a>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>
+<tr class=3D"mktoModule" id=3D"headtitle">=20
+<td style=3D"background-color:#FFFEFA;padding-left:40px; padding-right: 40p=
+x;" class=3D"padleft16 padright16">=20
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td style=3D"padding-top:32px; padding-bottom: 50px; color: #191919;font-fa=
+mily: 'Aeonik-Regular', sans-serif;font-weight: 400;font-size: 32px;line-he=
+ight: 40px; text-align:left;">=20
+<div id=3D"headtitle1" class=3D"mktoText">=20
+<div>
+ Announcement: Rules and Hooks End of Life=20
+</div>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>
+<tr class=3D"mktoModule" id=3D"headtitle44755087-c29f-4e33-a3ca-09ade9f45e7=
+2">=20
+<td style=3D"background-color:#FFFEFA;padding-left:40px; padding-right: 40p=
+x;" class=3D"padleft16 padright16">=20
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td style=3D"padding-top:0px; padding-bottom: 15px; color: #191919;font-fam=
+ily: 'Aeonik-Regular', sans-serif;font-weight: 400;font-size: 20px;line-hei=
+ght: 26px; text-align:left;">=20
+<div id=3D"headtitle17d00f125-0405-4f91-b249-5760565b9056" class=3D"mktoTex=
+t">=20
+<div>
+ What is changing?=20
+</div>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>
+<tr class=3D"mktoModule" id=3D"heroes44">=20
+<td style=3D"text-align: center;background-color:#FFFEFA;">=20
+<div>=20
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" style=3D"width:520px; margin: auto;" class=3D"padleft16 padright16 fullw=
+idth" width=3D"520">=20
+<tbody>=20
+<tr>=20
+<td class=3D"" style=3D"text-align: left; ">=20
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" clas=
+s=3D"">=20
+<tbody>=20
+<tr>=20
+<td class=3D"mobfullwidth padbot16" style=3D"padding-bottom:0px; padding-to=
+p:0px;" align=3D"left">=20
+<div class=3D"body3" style=3D"color: #6B665F;font-family: 'Aeonik-Regular',=
+ sans-serif; font-weight:400; font-size: 16px; line-height: 22px;">=20
+<div id=3D"banner_copy66" class=3D"mktoText">=20
+<div>
+ Over the course of the next 18 months, we will be winding down support for=
+ Rules and Hooks in our products and navigating all customers to use Action=
+s as the main place for customization and extensibility. Rules and Hooks wi=
+ll continue to receive full maintenance support until end of life, however,=
+ no new functionality will be introduced. The&nbsp;End of Life (EOL) date f=
+or Rules and Hooks will be=20
+<strong>November 18, 2024</strong>. Please note that=20
+<em>there are no immediate changes that will affect existing customers</em>=
+.=20
+</div>=20
+<div>=20
+<br>=20
+</div>=20
+<div>
+ We are giving you advance notice of these upcoming deprecations now, and p=
+roviding an extended migration window, to make this transition as smooth as=
+ possible. Separate deprecations for Rules and Hooks will begin over the ne=
+xt few months (Actions will achieve parity with Rules prior to changes to a=
+ny tenants, and is already at parity with Hooks), and we will provide more =
+details about each of them once the deprecations begin.&nbsp;=20
+</div>=20
+<div>=20
+<br>=20
+</div>=20
+<div>
+ We also encourage you to read the product team=E2=80=99s=20
+<a href=3D"https://explore.okta.com/dc/aExPLSRIXGI15KncTzKWh5BD-4eFUWIqxSjG=
+J6g60NlD7axqYMRw8s2g8SKdosn0p0OeADbuYkE9tJZyTNPyvLQ8HXIzjpDwARpWyiQXyC0ZGtx=
+Z8bD6se521o2NOBvNCG9UCEIa8MHemvQtiJkZtAAT2dKsNqALcUrsjv8afs2KXoW-GaBVfqEOSz=
+KYsFo9Ir1h5CUQy32F8ej5_OkGgA=3D=3D/ODU1LVFBSC02OTkAAAGLxTOpHfD-k3pH4inpjlLu=
+lZYN4midEJ7HdOp0F1FPM8k5_un4OPIIIkt_48osbvJ0mNvTwAU=3D" target=3D"_blank">P=
+reparing for Rules and Hooks End of Life</a> blog post&nbsp;for additional =
+insight.=20
+</div>=20
+</div>=20
+</div> </td>=20
+</tr>=20
+<tr>=20
+<!--[if !mso]><!-- -->=20
+<td align=3D"left" style=3D"display:none!important;">=20
+<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"padding-top:0px; padding-bottom:32px;">=20
+<div id=3D"text_cta1" class=3D"mktoText">=20
+<div>=20
+<a href=3D"https://explore.okta.com/ODU1LVFBSC02OTkAAAGLxTOpHZ7zC9AkNN3-Aa_=
+Ylkyowelc9whokoee3gNRE6Uyt3CSUD8njPh1zSPDOGFZS8iQjxY=3D" target=3D"_blank" =
+style=3D"text-decoration:underline; font-size:16px; font-family: 'Aeonik-Me=
+dium', sans-serif; color: #3F59E4;">Small Link</a>=20
+</div>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+<!--<![endif]-->=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+</div> </td>=20
+</tr>
+<tr class=3D"mktoModule" id=3D"headtitleb7cecd40-0cd3-4ce3-a60b-8b63dc4c48b=
+a">=20
+<td style=3D"background-color:#FFFEFA;padding-left:40px; padding-right: 40p=
+x;" class=3D"padleft16 padright16">=20
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td style=3D"padding-top:32px; padding-bottom: 15px; color: #191919;font-fa=
+mily: 'Aeonik-Regular', sans-serif;font-weight: 400;font-size: 20px;line-he=
+ight: 26px; text-align:left;">=20
+<div id=3D"headtitle1e8e4e364-4e6d-4ada-9ede-35b70d42f614" class=3D"mktoTex=
+t">=20
+<div>
+ Why are we making this change?=20
+</div>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>
+<tr class=3D"mktoModule" id=3D"heroes44bbba7fa0-784f-4e02-915c-50c817ef0641=
+">=20
+<td style=3D"text-align: center;background-color:#FFFEFA;">=20
+<div>=20
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" style=3D"width:520px; margin: auto;" class=3D"padleft16 padright16 fullw=
+idth" width=3D"520">=20
+<tbody>=20
+<tr>=20
+<td class=3D"" style=3D"text-align: left; ">=20
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" clas=
+s=3D"">=20
+<tbody>=20
+<tr>=20
+<td class=3D"mobfullwidth padbot16" style=3D"padding-bottom:0px; padding-to=
+p:0px;" align=3D"left">=20
+<div class=3D"body3" style=3D"color: #6B665F;font-family: 'Aeonik-Regular',=
+ sans-serif; font-weight:400; font-size: 16px; line-height: 22px;">=20
+<div id=3D"banner_copy66caa1c77a-5a6b-45d5-ad9a-957a845c6016" class=3D"mkto=
+Text">=20
+<div>
+ In order to improve our extensibility offering, we are deprecating Rules a=
+nd Hooks. We are focusing our attention on Actions as a unified extensibili=
+ty product for developers and we will continue to add more features and fun=
+ctionality to Actions. We recognize the value Rules and Hooks have provided=
+ over the years, and we know that it will take some time to migrate existin=
+g Rules and Hooks to Actions; because of this we are extending our migratio=
+n deprecation window through=20
+<strong>November 18, 2024</strong>. We want to make this transition as smoo=
+th as possible=20
+</div>=20
+</div>=20
+</div> </td>=20
+</tr>=20
+<tr>=20
+<!--[if !mso]><!-- -->=20
+<td align=3D"left" style=3D"display:none!important;">=20
+<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"padding-top:0px; padding-bottom:0px;">=20
+<div id=3D"text_cta17e0096e7-a952-4e81-9108-ed8083fc626a" class=3D"mktoText=
+">=20
+<div>=20
+<a href=3D"https://explore.okta.com/ODU1LVFBSC02OTkAAAGLxTOpHZ7zC9AkNN3-Aa_=
+Ylkyowelc9whokoee3gNRE6Uyt3CSUD8njPh1zSPDOGFZS8iQjxY=3D" target=3D"_blank" =
+style=3D"text-decoration:underline; font-size:16px; font-family: 'Aeonik-Me=
+dium', sans-serif; color: #3F59E4;">Small Link</a>=20
+</div>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+<!--<![endif]-->=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+</div> </td>=20
+</tr>
+<tr class=3D"mktoModule" id=3D"headtitle06ea4c7d-1093-4dfc-b6ba-7fc78470136=
+7">=20
+<td style=3D"background-color:#FFFEFA;padding-left:40px; padding-right: 40p=
+x;" class=3D"padleft16 padright16">=20
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td style=3D"padding-top:32px; padding-bottom: 15px; color: #191919;font-fa=
+mily: 'Aeonik-Regular', sans-serif;font-weight: 400;font-size: 20px;line-he=
+ight: 26px; text-align:left;">=20
+<div id=3D"headtitle19674450c-ef97-42f0-84e9-eca4321e83ee" class=3D"mktoTex=
+t">=20
+<div>
+ How are you affected?=20
+</div>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>
+<tr class=3D"mktoModule" id=3D"heroes44796bb8f7-027c-4010-bcaf-f73be02a6884=
+">=20
+<td style=3D"text-align: center;background-color:#FFFEFA;">=20
+<div>=20
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" style=3D"width:520px; margin: auto;" class=3D"padleft16 padright16 fullw=
+idth" width=3D"520">=20
+<tbody>=20
+<tr>=20
+<td class=3D"" style=3D"text-align: left; ">=20
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" clas=
+s=3D"">=20
+<tbody>=20
+<tr>=20
+<td class=3D"mobfullwidth padbot16" style=3D"padding-bottom:0px; padding-to=
+p:0px;" align=3D"left">=20
+<div class=3D"body3" style=3D"color: #6B665F;font-family: 'Aeonik-Regular',=
+ sans-serif; font-weight:400; font-size: 16px; line-height: 22px;">=20
+<div id=3D"banner_copy66b2281e0c-6cee-4c8b-8390-15e74131546c" class=3D"mkto=
+Text">=20
+<div>
+ If you are currently using Rules and/or Hooks, please make plans to migrat=
+e to Actions prior to the EOL date of=20
+<strong>November 18, 2024</strong>. Please see the resources below to aid i=
+n your migration planning.=20
+</div>=20
+<div>=20
+<br>=20
+</div>=20
+<div>
+ Beginning on=20
+<strong>October 16, 2023</strong>, Rules and Hooks functionality will not b=
+e present in newly-created tenants. Any tenants created before this date wi=
+ll continue to have access to Rules and Hooks until the EOL date of=20
+<strong>November 18, 2024</strong>.=20
+</div>=20
+</div>=20
+</div> </td>=20
+</tr>=20
+<tr>=20
+<!--[if !mso]><!-- -->=20
+<td align=3D"left" style=3D"display:none!important;">=20
+<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"padding-top:0px; padding-bottom:0px;">=20
+<div id=3D"text_cta1b3aa8b26-4439-44c0-8f73-eb1149e802eb" class=3D"mktoText=
+">=20
+<div>=20
+<a href=3D"https://explore.okta.com/ODU1LVFBSC02OTkAAAGLxTOpHZ7zC9AkNN3-Aa_=
+Ylkyowelc9whokoee3gNRE6Uyt3CSUD8njPh1zSPDOGFZS8iQjxY=3D" target=3D"_blank" =
+style=3D"text-decoration:underline; font-size:16px; font-family: 'Aeonik-Me=
+dium', sans-serif; color: #3F59E4;">Small Link</a>=20
+</div>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+<!--<![endif]-->=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+</div> </td>=20
+</tr>
+<tr class=3D"mktoModule" id=3D"headtitleedc3925c-af07-45ec-9d3d-f47e7794a9e=
+3">=20
+<td style=3D"background-color:#FFFEFA;padding-left:40px; padding-right: 40p=
+x;" class=3D"padleft16 padright16">=20
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td style=3D"padding-top:32px; padding-bottom: 15px; color: #191919;font-fa=
+mily: 'Aeonik-Regular', sans-serif;font-weight: 400;font-size: 20px;line-he=
+ight: 26px; text-align:left;">=20
+<div id=3D"headtitle1140276e3-d561-4753-98a9-83ac888d3e0e" class=3D"mktoTex=
+t">=20
+<div>
+ What action do you need to take?=20
+</div>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>
+<tr class=3D"mktoModule" id=3D"heroes44086cdddb-9ab6-4914-8821-86ef2c2e3cd7=
+">=20
+<td style=3D"text-align: center;background-color:#FFFEFA;">=20
+<div>=20
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" style=3D"width:520px; margin: auto;" class=3D"padleft16 padright16 fullw=
+idth" width=3D"520">=20
+<tbody>=20
+<tr>=20
+<td class=3D"" style=3D"text-align: left; ">=20
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" clas=
+s=3D"">=20
+<tbody>=20
+<tr>=20
+<td class=3D"mobfullwidth padbot16" style=3D"padding-bottom:0px; padding-to=
+p:0px;" align=3D"left">=20
+<div class=3D"body3" style=3D"color: #6B665F;font-family: 'Aeonik-Regular',=
+ sans-serif; font-weight:400; font-size: 16px; line-height: 22px;">=20
+<div id=3D"banner_copy6649824d0d-7b67-4e0e-a375-404bac44a6c3" class=3D"mkto=
+Text">=20
+<div>
+ From today, we recommend you start building new extensibility use cases in=
+ Actions and, if you are able, start migrating your existing Rules and Hook=
+s to Actions. To help aid you in your migration, please review the below do=
+cuments:=20
+</div>=20
+<div>=20
+<br>=20
+</div>=20
+<div>=20
+<ul>=20
+<li><a href=3D"https://explore.okta.com/dc/aExPLSRIXGI15KncTzKWh2qTrbBNeXzw=
+OrKEmH-JR1IbIkczMWdElSF7vY4LV72ggZMM_ca1sQesQXBt-Nd1OkjILh7sGiz4dmjw-2_0lwv=
+AA5K0qi0xVufUG-E-9JxhEjVF-wKknyPmtJ81DQW88GRJ4QaYd7xOt9IfN3YNS72rconmF3aH-2=
+94Zd_WUy2mTlPOyimnHAwv_dCr0WfJveG1lMS0SHDhjy01uoHOhIY=3D/ODU1LVFBSC02OTkAAA=
+GLxTOpHfD-k3pH4inpjlLulZYN4midEJ7HdOp0F1FPM8k5_un4OPIIIkt_48osbvJ0mNvTwAU=
+=3D" target=3D"_blank">Migrate from Rules to Actions</a></li>=20
+<li><a href=3D"https://explore.okta.com/dc/aExPLSRIXGI15KncTzKWh2qTrbBNeXzw=
+OrKEmH-JR1IbIkczMWdElSF7vY4LV72gXX2K60MWYQXuO5_w8YhnsZfwFRc08bfKZyfaS-mGEiL=
+xv2BHhHgGYLBLX4XWn3G5YERoRAOEJCVMPTEkGsHYGRm2GmvzmO-2PCiIB6fnD3S2_EEZ68NPfk=
+dU8EciIylSZXEMvyROYBpOgsUMwLIlAEjrWpe7BXWtPdDU_FAvWoU=3D/ODU1LVFBSC02OTkAAA=
+GLxTOpHfD-k3pH4inpjlLulZYN4midEJ7HdOp0F1FPM8k5_un4OPIIIkt_48osbvJ0mNvTwAU=
+=3D" target=3D"_blank">Migrate from Hooks to Actions</a></li>=20
+</ul>=20
+</div>=20
+<div>=20
+<br>=20
+</div>=20
+<div>
+ As you begin transitioning to Actions, please let us know if you run into =
+any difficulties or blockers. We want to make this transition as easy as po=
+ssible.=20
+</div>=20
+</div>=20
+</div> </td>=20
+</tr>=20
+<tr>=20
+<!--[if !mso]><!-- -->=20
+<td align=3D"left" style=3D"display:none!important;">=20
+<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"padding-top:0px; padding-bottom:0px;">=20
+<div id=3D"text_cta1a0298fbd-7c10-4ea2-8298-f0f0804ccd4c" class=3D"mktoText=
+">=20
+<div>=20
+<a href=3D"https://explore.okta.com/ODU1LVFBSC02OTkAAAGLxTOpHZ7zC9AkNN3-Aa_=
+Ylkyowelc9whokoee3gNRE6Uyt3CSUD8njPh1zSPDOGFZS8iQjxY=3D" target=3D"_blank" =
+style=3D"text-decoration:underline; font-size:16px; font-family: 'Aeonik-Me=
+dium', sans-serif; color: #3F59E4;">Small Link</a>=20
+</div>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+<!--<![endif]-->=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+</div> </td>=20
+</tr>
+<tr class=3D"mktoModule" id=3D"headtitlefa6b9de2-d0e6-4ec7-a139-6c0c0fa3fd4=
+e">=20
+<td style=3D"background-color:#FFFEFA;padding-left:40px; padding-right: 40p=
+x;" class=3D"padleft16 padright16">=20
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td style=3D"padding-top:32px; padding-bottom: 15px; color: #191919;font-fa=
+mily: 'Aeonik-Regular', sans-serif;font-weight: 400;font-size: 20px;line-he=
+ight: 26px; text-align:left;">=20
+<div id=3D"headtitle1c63c11f3-1af0-4bad-bd86-31ea1f31b7a9" class=3D"mktoTex=
+t">=20
+<div>
+ How can you get additional assistance?=20
+</div>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>
+<tr class=3D"mktoModule" id=3D"heroes44fda61ec1-62aa-4428-a982-29a898e84538=
+">=20
+<td style=3D"text-align: center;background-color:#FFFEFA;">=20
+<div>=20
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" style=3D"width:520px; margin: auto;" class=3D"padleft16 padright16 fullw=
+idth" width=3D"520">=20
+<tbody>=20
+<tr>=20
+<td class=3D"" style=3D"text-align: left; ">=20
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" clas=
+s=3D"">=20
+<tbody>=20
+<tr>=20
+<td class=3D"mobfullwidth padbot16" style=3D"padding-bottom:0px; padding-to=
+p:0px;" align=3D"left">=20
+<div class=3D"body3" style=3D"color: #6B665F;font-family: 'Aeonik-Regular',=
+ sans-serif; font-weight:400; font-size: 16px; line-height: 22px;">=20
+<div id=3D"banner_copy664a9a1477-5b6d-4351-845f-26da7f22e566" class=3D"mkto=
+Text">=20
+<div>
+ We are here to help. Contact us by using the=20
+<a href=3D"https://explore.okta.com/dc/IXa7a3qCNsfykCKMTv6sTB3jYSBDNjBDogYQ=
+KXVr1jYCtpZJZ2iT_iMI-zlrJt9fl8NlmSIuVzh-fZS1VY-htmhYdnkfz-92vPT-XOy19T1cU0k=
+UtZSc5xSUqb7xM8X5d_6C6eMUEjj2blpagkixQA=3D=3D/ODU1LVFBSC02OTkAAAGLxTOpHfD-k=
+3pH4inpjlLulZYN4midEJ7HdOp0F1FPM8k5_un4OPIIIkt_48osbvJ0mNvTwAU=3D" target=
+=3D"_blank">Auth0 by Okta Support Center</a> or=20
+<a href=3D"https://explore.okta.com/dc/7lM4V2h3Ux1YIeo9OliDNbziXBla-EEK8KN9=
+68xrtoR6_XSyIeawxb4wLZ3E7cF2ERPrrqv_RI32PlWLo5n6zXE8dprJnnKKC4uEpxBECE8rmie=
+GXeVSDkgN8I7Z1pXkTvf97VGLby0heqj6ygXPFg=3D=3D/ODU1LVFBSC02OTkAAAGLxTOpHfD-k=
+3pH4inpjlLulZYN4midEJ7HdOp0F1FPM8k5_un4OPIIIkt_48osbvJ0mNvTwAU=3D" target=
+=3D"_blank">Auth0 by Okta Community</a>.=20
+</div>=20
+</div>=20
+</div> </td>=20
+</tr>=20
+<tr>=20
+<!--[if !mso]><!-- -->=20
+<td align=3D"left" style=3D"display:none!important;">=20
+<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"padding-top:0px; padding-bottom:0px;">=20
+<div id=3D"text_cta124567eb9-2e34-4aa8-b5a4-e56aa31b25ab" class=3D"mktoText=
+">=20
+<div>=20
+<a href=3D"https://explore.okta.com/ODU1LVFBSC02OTkAAAGLxTOpHZ7zC9AkNN3-Aa_=
+Ylkyowelc9whokoee3gNRE6Uyt3CSUD8njPh1zSPDOGFZS8iQjxY=3D" target=3D"_blank" =
+style=3D"text-decoration:underline; font-size:16px; font-family: 'Aeonik-Me=
+dium', sans-serif; color: #3F59E4;">Small Link</a>=20
+</div>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+<!--<![endif]-->=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+</div> </td>=20
+</tr>
+<tr class=3D"mktoModule" id=3D"headtitlea512efac-1269-433a-b5e5-df94c002913=
+0">=20
+<td style=3D"background-color:#FFFEFA;padding-left:40px; padding-right: 40p=
+x;" class=3D"padleft16 padright16">=20
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td style=3D"padding-top:32px; padding-bottom: 15px; color: #191919;font-fa=
+mily: 'Aeonik-Regular', sans-serif;font-weight: 400;font-size: 20px;line-he=
+ight: 26px; text-align:left;">=20
+<div id=3D"headtitle19e0e4cf5-76a1-4ddd-9011-0935019cbf61" class=3D"mktoTex=
+t">=20
+<div>
+ Useful Resources=20
+</div>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>
+<tr class=3D"mktoModule" id=3D"heroes44865e5364-a43c-43fe-8c5c-9a213d9d0bcf=
+">=20
+<td style=3D"text-align: center;background-color:#FFFEFA;">=20
+<div>=20
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" style=3D"width:520px; margin: auto;" class=3D"padleft16 padright16 fullw=
+idth" width=3D"520">=20
+<tbody>=20
+<tr>=20
+<td class=3D"" style=3D"text-align: left; ">=20
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" clas=
+s=3D"">=20
+<tbody>=20
+<tr>=20
+<td class=3D"mobfullwidth padbot16" style=3D"padding-bottom:0px; padding-to=
+p:0px;" align=3D"left">=20
+<div class=3D"body3" style=3D"color: #6B665F;font-family: 'Aeonik-Regular',=
+ sans-serif; font-weight:400; font-size: 16px; line-height: 22px;">=20
+<div id=3D"banner_copy66976ee7e8-1433-4374-bafa-24e5c2643b23" class=3D"mkto=
+Text">=20
+<ul>=20
+<li><a href=3D"https://explore.okta.com/dc/aExPLSRIXGI15KncTzKWh5BD-4eFUWIq=
+xSjGJ6g60NlD7axqYMRw8s2g8SKdosn0p0OeADbuYkE9tJZyTNPyvLQ8HXIzjpDwARpWyiQXyC0=
+ZGtxZ8bD6se521o2NOBvNCG9UCEIa8MHemvQtiJkZtAAT2dKsNqALcUrsjv8afs2KXoW-GaBVfq=
+EOSzKYsFo9Ir1h5CUQy32F8ej5_OkGgA=3D=3D/ODU1LVFBSC02OTkAAAGLxTOpHfD-k3pH4inp=
+jlLulZYN4midEJ7HdOp0F1FPM8k5_un4OPIIIkt_48osbvJ0mNvTwAU=3D" target=3D"_blan=
+k" style=3D"font-family: Aeonik-Regular, sans-serif; font-size: 16px; font-=
+style: normal; font-variant-ligatures: normal; font-variant-caps: normal; f=
+ont-weight: 400; letter-spacing: normal; orphans: 2; text-align: -webkit-le=
+ft; text-indent: 0px; text-transform: none; white-space: normal; widows: 2;=
+ word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #fffe=
+fa;">Preparing for Rules and Hooks End of Life</a></li>=20
+<li><a href=3D"https://explore.okta.com/dc/aExPLSRIXGI15KncTzKWh2qTrbBNeXzw=
+OrKEmH-JR1IbIkczMWdElSF7vY4LV72ggZMM_ca1sQesQXBt-Nd1OkjILh7sGiz4dmjw-2_0lwv=
+AA5K0qi0xVufUG-E-9JxhEjVF-wKknyPmtJ81DQW88GRJ4QaYd7xOt9IfN3YNS72rconmF3aH-2=
+94Zd_WUy2mTlPOyimnHAwv_dCr0WfJveG1lMS0SHDhjy01uoHOhIY=3D/ODU1LVFBSC02OTkAAA=
+GLxTOpHfD-k3pH4inpjlLulZYN4midEJ7HdOp0F1FPM8k5_un4OPIIIkt_48osbvJ0mNvTwAU=
+=3D" target=3D"_blank">Migrate from Rules to Actions</a></li>=20
+<li><a href=3D"https://explore.okta.com/dc/aExPLSRIXGI15KncTzKWh2qTrbBNeXzw=
+OrKEmH-JR1IbIkczMWdElSF7vY4LV72gXX2K60MWYQXuO5_w8YhnsZfwFRc08bfKZyfaS-mGEiL=
+xv2BHhHgGYLBLX4XWn3G5YERoRAOEJCVMPTEkGsHYGRm2GmvzmO-2PCiIB6fnD3S2_EEZ68NPfk=
+dU8EciIylSZXEMvyROYBpOgsUMwLIlAEjrWpe7BXWtPdDU_FAvWoU=3D/ODU1LVFBSC02OTkAAA=
+GLxTOpHfD-k3pH4inpjlLulZYN4midEJ7HdOp0F1FPM8k5_un4OPIIIkt_48osbvJ0mNvTwAU=
+=3D" target=3D"_blank">Migrate from Hooks to Actions</a></li>=20
+<li><a href=3D"https://explore.okta.com/dc/7lM4V2h3Ux1YIeo9OliDNbExz5MQsQaP=
+6GOoKrc8wlwBsL2aDm9cqKsmyiINUeqvWqTrJYQ-kmqrHV9l5Q4W6PkFNbBs3ODPgGhdupAIpEH=
+-06aNzztj55MktJWB2oc_j88CDFdNo9E1zyvVx_YXFoRpPLPZn8Yc-8atfgZBoxS_gdCP_63WAI=
+G_JwjzYWQmOpm7kDyzit1WJAl2li3Eqg=3D=3D/ODU1LVFBSC02OTkAAAGLxTOpHfD-k3pH4inp=
+jlLulZYN4midEJ7HdOp0F1FPM8k5_un4OPIIIkt_48osbvJ0mNvTwAU=3D" target=3D"_blan=
+k">Community Post: Rules and Hooks nearing End of Life</a></li>=20
+</ul>=20
+</div>=20
+</div> </td>=20
+</tr>=20
+<tr>=20
+<!--[if !mso]><!-- -->=20
+<td align=3D"left" style=3D"display:none!important;">=20
+<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"padding-top:0px; padding-bottom:0px;">=20
+<div id=3D"text_cta1c8b46311-ffa0-4466-9bc9-3e59506362a5" class=3D"mktoText=
+">=20
+<div>=20
+<a href=3D"https://explore.okta.com/ODU1LVFBSC02OTkAAAGLxTOpHZ7zC9AkNN3-Aa_=
+Ylkyowelc9whokoee3gNRE6Uyt3CSUD8njPh1zSPDOGFZS8iQjxY=3D" target=3D"_blank" =
+style=3D"text-decoration:underline; font-size:16px; font-family: 'Aeonik-Me=
+dium', sans-serif; color: #3F59E4;">Small Link</a>=20
+</div>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+<!--<![endif]-->=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+</div> </td>=20
+</tr>
+<tr class=3D"mktoModule" id=3D"divider">=20
+<td style=3D"height:56px;background-color:#FFFEFA;"> &nbsp; </td>=20
+</tr>
+<tr class=3D"mktoModule" id=3D"okta_footerb616126b-75b7-4729-b85c-971924b34=
+286">=20
+<td style=3D"background:#F6F1E7; padding-left:40px; padding-right:40px;bord=
+er-radius:0px 0px 20px 20px;" class=3D"border padleft16 padright16">=20
+<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td style=3D"padding-top:40px; padding-bottom:40px;">=20
+<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" align=3D"left">=20
+<tbody>=20
+<tr>=20
+<!--[if !mso]><!-- -->=20
+<td style=3D"display: none!important;">=20
+<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"padding-right:16px;background:#F6F1E7;">=20
+<div id=3D"social18106a222-8d7b-4815-ab2c-f30969470fb6" class=3D"mktoImg" m=
+ktolockimgsize=3D"true" mktolockimgstyle=3D"true">=20
+<a href=3D"https://explore.okta.com/ODU1LVFBSC02OTkAAAGLxTOpHb-mErxBQ4NNhVu=
+i8ZNi7p2nDMsFwZYE-5BVU-2PSoH8KQGMSG3lkjGSkMUt1b3sH2Q=3D" target=3D"_blank">=
+<img src=3D"https://pages.okta.com/rs/855-QAH-699/images/fb_new.png" width=
+=3D"auto" height=3D"24" alt=3D"Facebook"></a>=20
+</div> </td>=20
+<td style=3D"padding-right:16px;background:#F6F1E7;">=20
+<div id=3D"social26d89fdd7-5da5-4c32-bafa-2243a49d3893" class=3D"mktoImg" m=
+ktolockimgsize=3D"true" mktolockimgstyle=3D"true">=20
+<a href=3D"https://explore.okta.com/ODU1LVFBSC02OTkAAAGLxTOpHSYzbx35H8nDdxq=
+UmO_52CQgc10tc8_6DvnkLvKmho1j-rVJfut4yuPd6L4qrfcNQNE=3D" target=3D"_blank">=
+<img src=3D"https://pages.okta.com/rs/855-QAH-699/images/tw_new.png" width=
+=3D"auto" height=3D"24" alt=3D"Twitter"></a>=20
+</div> </td>=20
+<td style=3D"padding-right:16px;background:#F6F1E7;">=20
+<div id=3D"social32d5ca6b1-e247-4d1b-bd13-e2437505949e" class=3D"mktoImg" m=
+ktolockimgsize=3D"true" mktolockimgstyle=3D"true">=20
+<a href=3D"https://explore.okta.com/ODU1LVFBSC02OTkAAAGLxTOpHailSi_vVPM0E3t=
+JsaeFZSE24Nmo_L3XjygQWzsr3f_kvaYBP0VEe-bONMAN_lMcWpE=3D" target=3D"_blank">=
+<img src=3D"https://pages.okta.com/rs/855-QAH-699/images/linkedin_new.png" =
+width=3D"auto" height=3D"24" alt=3D"Linkedin"></a>=20
+</div> </td>=20
+<td style=3D"background:#F6F1E7;">=20
+<div id=3D"social46708f9e1-3d13-4dad-bd6b-0301b54c0279" class=3D"mktoImg" m=
+ktolockimgsize=3D"true" mktolockimgstyle=3D"true">=20
+<a href=3D"https://explore.okta.com/ODU1LVFBSC02OTkAAAGLxTOpHWYb2B2VszmotzV=
+FZrlDemnKbX9LwBXJcP5W4nLaDOkul8S9hMglcMxUBf26YXpZonQ=3D" target=3D"_blank">=
+<img src=3D"https://pages.okta.com/rs/855-QAH-699/images/yt_new.png" width=
+=3D"auto" height=3D"24" alt=3D"Youtube"></a>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+<!--<![endif]-->=20
+<!--[if IE | mso]><!-- -->=20
+<td style=3D"display: noneIE | important;">=20
+<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"padding-right:16px;background:#F6F1E7;">=20
+<div id=3D"social62a7f37e9-95d0-4274-9899-a701840bd17b" class=3D"mktoImg" m=
+ktolockimgsize=3D"true" mktolockimgstyle=3D"true">=20
+<a href=3D"https://explore.okta.com/ODU1LVFBSC02OTkAAAGLxTOpHailSi_vVPM0E3t=
+JsaeFZSE24Nmo_L3XjygQWzsr3f_kvaYBP0VEe-bONMAN_lMcWpE=3D" target=3D"_blank">=
+<img src=3D"https://pages.okta.com/rs/855-QAH-699/images/linkedin_new.png" =
+width=3D"auto" height=3D"24" alt=3D"Linkedin"></a>=20
+</div> </td>=20
+<td style=3D"padding-right:16px;background:#F6F1E7;">=20
+<div id=3D"social70a86f0f3-c91e-4b09-8d15-9e08fe576cd8" class=3D"mktoImg" m=
+ktolockimgsize=3D"true" mktolockimgstyle=3D"true">=20
+<a href=3D"https://explore.okta.com/ODU1LVFBSC02OTkAAAGLxTOpHSYzbx35H8nDdxq=
+UmO_52CQgc10tc8_6DvnkLvKmho1j-rVJfut4yuPd6L4qrfcNQNE=3D" target=3D"_blank">=
+<img src=3D"https://pages.okta.com/rs/855-QAH-699/images/tw_new.png" width=
+=3D"auto" height=3D"24" alt=3D"Twitter"></a>=20
+</div> </td>=20
+<td style=3D"background:#F6F1E7;">=20
+<div id=3D"social89cdd08ef-9100-4868-8d6c-b39f1c5e6aad" class=3D"mktoImg" m=
+ktolockimgsize=3D"true" mktolockimgstyle=3D"true">=20
+<a href=3D"https://explore.okta.com/ODU1LVFBSC02OTkAAAGLxTOpHfLdqdcZtMzpzzF=
+5UfTkn-2p37FyCSvf8UYJX0h8-Ytnk2S1O4modvScwy3D_tOJOFY=3D" target=3D"_blank">=
+<img src=3D"https://pages.okta.com/rs/855-QAH-699/images/gh_new.png" width=
+=3D"auto" height=3D"24" alt=3D"GitHub"></a>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+<!--<![endif]-->=20
+<!--[if !mso]><!-- -->=20
+<td style=3D"display: none!important;">=20
+<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"padding-left:16px;background:#F6F1E7;">=20
+<div id=3D"social94e55790b-c12e-457e-9057-eb2c76c65308" class=3D"mktoImg" m=
+ktolockimgsize=3D"true" mktolockimgstyle=3D"true">=20
+<a href=3D"https://explore.okta.com/ODU1LVFBSC02OTkAAAGLxTOpHS3POeQ8OV3EuHX=
+zfvUI90D5OR78JUV-qyYsYG-cSS6pLMFuppGy2dd_K_Jmn9rdqYg=3D" target=3D"_blank">=
+<img width=3D"auto" height=3D"24" alt=3D"SocialIcon1"></a>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+<!--<![endif]-->=20
+<!--[if !mso]><!-- -->=20
+<td style=3D"display: none!important;">=20
+<table role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"padding-left:16px;background:#F6F1E7;">=20
+<div id=3D"social1067f95a96-f876-4bc9-baee-dcbd4fa86c6a" class=3D"mktoImg" =
+mktolockimgsize=3D"true" mktolockimgstyle=3D"true">=20
+<a href=3D"https://explore.okta.com/ODU1LVFBSC02OTkAAAGLxTOpHS3POeQ8OV3EuHX=
+zfvUI90D5OR78JUV-qyYsYG-cSS6pLMFuppGy2dd_K_Jmn9rdqYg=3D" target=3D"_blank">=
+<img width=3D"auto" height=3D"24" alt=3D"SocialIcon2"></a>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+<!--<![endif]-->=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"padding-bottom:32px; vertical-align: top;" valign=3D"top">=20
+<div id=3D"footerff8e441b-5cc0-495f-abee-aba1576d32a6" class=3D"mktoText" s=
+tyle=3D"color: #6B665F;font-family: 'Aeonik-Regular', sans-serif;font-weigh=
+t: 400;font-size: 14px;line-height: 20px;opacity: 0.8;">=20
+<div>
+ This email was sent to=20
+<a href=3D"https://explore.okta.com/dc/mC32jVeDo-6qSxuj4QvPZ0vxGLnqC44FoD0g=
+6yZN00A=3D/ODU1LVFBSC02OTkAAAGLxTOpHfD-k3pH4inpjlLulZYN4midEJ7HdOp0F1FPM8k5=
+_un4OPIIIkt_48osbvJ0mNvTwAU=3D" target=3D"_blank" style=3D"text-decoration:=
+ none; color: #3f59e4;"><span style=3D"text-decoration: none; color: #3f59e=
+4;">luke.sands@outlook.com</span></a>. You are receiving this message becau=
+se you are an administrator of an Auth0 by Okta tenant, and we are required=
+ to send service notices to you. If you would like to unsubscribe separatel=
+y from marketing emails, please=20
+<a href=3D"https://explore.okta.com/dc/7_HgQqnvjLvOv4B955s7cWKr4XG_pXXQ4zy6=
+lN8kCAV3F46m6A2GGTxeT7L50lHTbcQs62ly3aFeRT8o6bmTYVg-5724gNtmf75tWlF-SQBmeI5=
+CuALLjDnfH2KSmuPzy7ANAn8MUYqotwtFm3vwKDxlYFOi92PlqS3fs22B0kyMpQqN4EcbDXhdX4=
+KLANZYqnR7nZQAFmJmExUUKSUEqQ=3D=3D/ODU1LVFBSC02OTkAAAGLxTOpHfD-k3pH4inpjlLu=
+lZYN4midEJ7HdOp0F1FPM8k5_un4OPIIIkt_48osbvJ0mNvTwAU=3D" target=3D"_blank" s=
+tyle=3D"text-decoration: none; color: #3f59e4;"><span style=3D"text-decorat=
+ion: none; color: #3f59e4;">visit our email preference center</span></a>.=20
+</div>=20
+<p style=3D"margin-top: 0px; margin-bottom: 8px; color: color: #6B665F;"><b=
+r></p>=20
+<p style=3D"margin-top: 0px; margin-bottom: 8px; color: color: #6B665F;">20=
+23 Okta, Inc. All rights reserved.</p>=20
+<p style=3D"margin-top: 0px; margin-bottom: 8px; color: color: #6B665F;"><a=
+ href=3D"https://explore.okta.com/ODU1LVFBSC02OTkAAAGLxTOpHVwf-PUyEzrgtQMLc=
+4pq6NhBxFjG-GEvSeJNeStaIj8XpyVpefZkUZh0P1KFX5dlCzw=3D" style=3D"color: #6B6=
+65F; text-decoration: underline;">Privacy Policy</a>&nbsp;|&nbsp;<a href=3D=
+"https://explore.okta.com/ODU1LVFBSC02OTkAAAGLxTOpHG4P48FRJF-uSRmSqFjB2XdHh=
+R4qfDMpBEzkNeo4NikWS4SBrmfW7xEU_AIUaDPX1Xc=3D" style=3D"color: #6B665F; tex=
+t-decoration: underline;">Unsubscribe</a>&nbsp;|&nbsp;<a href=3D"https://pa=
+ges.okta.com/index.php/email/emailWebview?mkt_tok=3DODU1LVFBSC02OTkAAAGLxTO=
+pHaap0ySWkxr6zOb7IgyVg7CfAgFfJO0o5pU3HsDOZDixeLCMRPpMdGEmXs378GoWt6Whbal5hH=
+IuTnXhyt9pzdD1a6L3pATozDCrv5rxzTlr&amp;md_id=3D55047" style=3D"color: #6B66=
+5F; text-decoration: underline;">View as Webpage</a></p>=20
+<p style=3D"margin-top: 0px; margin-bottom: 8px; color: color: #6B665F;"><b=
+r></p>=20
+<div>=20
+<span style=3D"color: #6B665F;"><a href=3D"https://explore.okta.com/ODU1LVF=
+BSC02OTkAAAGLxTOpHa0rAGmXRznJmohQoLCIVwdFoiMuHLMQJwQrDc55_jvCUgGPkU8NLgc9lJ=
+L9qAqHTw0=3D" target=3D"_blank" style=3D"text-decoration: none; color: #828=
+282;">Okta <strong>&nbsp;=E2=80=A2&nbsp;</strong> 100 1st St (6th floor) <s=
+trong>&nbsp;=E2=80=A2&nbsp;</strong> San Francisco, CA 94105 <strong>&nbsp;=
+=E2=80=A2&nbsp;</strong> USA</a>
+</span>=20
+</div>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>
+</table>=20
+</div>=20
+<!--[if gte mso 9]>
+            </td>
+         </tr>
+      </table>
+      <!--<![endif]--> =20
+<a href=3D"https://explore.okta.com/ODU1LVFBSC02OTkAAAGLxTOpHSEIqaAz3vFJwN0=
+-awqRwm_T5Yyx7LMdmQtx5VSAyh0RpmcJd11DsAREpoiQs3TVfu4=3D"></a>
+<img src=3D"https://explore.okta.com/trk?t=3D1&amp;mid=3DODU1LVFBSC02OTk6MD=
+o1ODA4MDozNDU2Nzg6MTc1NTI2Mzo1NTA0Nzo5OjE5OTQ2ODg6NTExNjkzMDM6bHVrZS5zYW5kc=
+0BvdXRsb29rLmNvbQ%3D%3D" width=3D"1" height=3D"1" style=3D"display:none !im=
+portant;" alt=3D"">
+</body>
+</html>=
+
+------=_Part_47734319_2003575332.1684268579110--

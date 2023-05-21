@@ -1,0 +1,14 @@
+github.com/d3code/clog v0.0.0-20230517134008-4946adb248ba h1:3yRpCBUyTi/vHtiNo+BTfGgy78Trx8EsvFOZkYZ/P0M=
+github.com/d3code/clog v0.0.0-20230517134008-4946adb248ba/go.mod h1:htSVLvXJJRBj6RVdUVYLHIrpvrh4MvAVtvIn6EkjtrE=
+github.com/d3code/pkg v0.0.0-20230516214244-12939b9fffc1 h1:vMek3NGuPKzDb9yNXzfHtVe1JLI8eFwugkdw9PSNcEc=
+github.com/d3code/pkg v0.0.0-20230516214244-12939b9fffc1/go.mod h1:a7goayOUO6HSAj9WQnlQjME/eZPX18ncm+FCdnSWZ3Q=
+github.com/d3code/zlog v0.0.0-20230517134336-c56b9182490e h1:pC4lH7sKJlSl6I9n+VcVzemd4HTjkNByJnjhZGN320o=
+github.com/d3code/zlog v0.0.0-20230517134336-c56b9182490e/go.mod h1:eUh/LDSK9krp7On1hZOmgyPWH28pu4jH29tMYT+zSLc=
+go.uber.org/atomic v1.11.0 h1:ZvwS0R+56ePWxUNi+Atn9dWONBPp/AUETXlHW0DxSjE=
+go.uber.org/atomic v1.11.0/go.mod h1:LUxbIzbOniOlMKjJjyPfpl4v+PKK2cNJn91OQbhoJI0=
+go.uber.org/multierr v1.11.0 h1:blXXJkSxSSfBVBlC76pxqeO+LN3aDfLQo+309xJstO0=
+go.uber.org/multierr v1.11.0/go.mod h1:20+QtiLqy0Nd6FdQB9TLXag12DsQkrbs3htMFfDN80Y=
+go.uber.org/zap v1.24.0 h1:FiJd5l1UOLj0wCgbSE0rwwXHzEdAZS6hiiSnxJN/D60=
+go.uber.org/zap v1.24.0/go.mod h1:2kMP+WWQ8aoFoedH3T2sq6iJ2yDWpHbP0f6MQbS9Gkg=
+golang.org/x/text v0.9.0 h1:2sjJmO8cDvYveuX97RDLsxlyUxLl+GHoLxBiRdHllBE=
+golang.org/x/text v0.9.0/go.mod h1:e1OnstbJyHTd6l/uOt8jFFHp6TRDWZR/bV3emEE/zU8=

@@ -1,0 +1,50 @@
+# IDE configuration files
+.idea/
+.vscode/
+
+# Operating system files
+.DS_Store
+
+# Go (https://golang.org)
+go.work
+go.work.sum
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Java (https://www.java.com)
+*.class
+target/
+.gradle/
+
+# Docker (https://www.docker.com)
+.env.local
+.env.*.local
+
+# Terraform (https://www.terraform.io)
+# State should never be committed to a git repository, and so *.tfstate is ignored
+.terraform/
+.terraform.lock.hcl
+terraform.tfvars
+*.tfstate
+*.tfstate.backup
+
+# Python (https://www.python.org)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Node.js (https://nodejs.org)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Angular (https://angular.io)
+/dist/
+/tmp/
+/out-tsc/
+
+# Bower (https://bower.io)
+/bower_components/
