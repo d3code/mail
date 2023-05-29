@@ -1,4 +1,4 @@
-module xmail
+module github.com/d3code/xmail
 
 go 1.20
 
