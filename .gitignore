@@ -42,9 +42,13 @@ package-lock.json
 yarn.lock
 
 # Angular
-/dist/
-/tmp/
-/out-tsc/
+.angular/
+dist/
+tmp/
+out-tsc/
 
 # Bower
-/bower_components/
+bower_components/
+
+# Testing
+/coverage/
