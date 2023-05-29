@@ -5,7 +5,7 @@
 # Operating system files
 .DS_Store
 
-# Go (https://golang.org)
+# Go
 go.work
 go.work.sum
 *.exe
@@ -14,16 +14,16 @@ go.work.sum
 *.so
 *.dylib
 
-# Java (https://www.java.com)
+# Java
 *.class
 target/
 .gradle/
 
-# Docker (https://www.docker.com)
+# Docker
 .env.local
 .env.*.local
 
-# Terraform (https://www.terraform.io)
+# Terraform
 # State should never be committed to a git repository, and so *.tfstate is ignored
 .terraform/
 .terraform.lock.hcl
@@ -31,20 +31,20 @@ terraform.tfvars
 *.tfstate
 *.tfstate.backup
 
-# Python (https://www.python.org)
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
 
-# Node.js (https://nodejs.org)
+# Node.js
 node_modules/
 package-lock.json
 yarn.lock
 
-# Angular (https://angular.io)
+# Angular
 /dist/
 /tmp/
 /out-tsc/
 
-# Bower (https://bower.io)
+# Bower
 /bower_components/
