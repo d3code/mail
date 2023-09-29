@@ -1,4 +1,4 @@
-github.com/d3code/clog v0.0.0-20230529212721-c2862b694b95 h1:LFjYeJgzldJkc1jLHltxsC4BtZt2rJgHAKvt7d311iM=
-github.com/d3code/clog v0.0.0-20230529212721-c2862b694b95/go.mod h1:htSVLvXJJRBj6RVdUVYLHIrpvrh4MvAVtvIn6EkjtrE=
-github.com/d3code/pkg v0.0.0-20230916153423-97cd443857d8 h1:QY0u480dWK+DuhIcO1QHxbqDwscxRxEqkQ/u526PddQ=
-github.com/d3code/pkg v0.0.0-20230916153423-97cd443857d8/go.mod h1:Uydgq5tUGn2j7kw1tHyvMTB6YNLKsqZSgBiluOxTnx4=
+github.com/d3code/clog v0.0.0-20230929023203-6b1128fc5ab3 h1:nadS2BV4kLVNPvqbsbgOWF9ykDeBpLCTdpjSK0xFNpg=
+github.com/d3code/clog v0.0.0-20230929023203-6b1128fc5ab3/go.mod h1:htSVLvXJJRBj6RVdUVYLHIrpvrh4MvAVtvIn6EkjtrE=
+github.com/d3code/pkg v0.0.0-20230929023408-14ed8956ac70 h1:ilIiBV4h9nXsJgOALay6YbdeuIAvHPYUsm8PJ0+DZDg=
+github.com/d3code/pkg v0.0.0-20230929023408-14ed8956ac70/go.mod h1:VyW+zHKb0entVybISuggtFYbZM/2AIO5LYeo/+wnnRc=

@@ -4,6 +4,6 @@ go 1.21
 
 toolchain go1.21.0
 
-require github.com/d3code/pkg v0.0.0-20230916153423-97cd443857d8
+require github.com/d3code/pkg v0.0.0-20230929023408-14ed8956ac70
 
-require github.com/d3code/clog v0.0.0-20230529212721-c2862b694b95 // indirect
+require github.com/d3code/clog v0.0.0-20230929023203-6b1128fc5ab3 // indirect
