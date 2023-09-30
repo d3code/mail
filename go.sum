@@ -1,4 +1,4 @@
 github.com/d3code/clog v0.0.0-20230930052527-683e18a3d08d h1:dIVVSvq1NzQMf/eYTYZiPRy5D1kErYn++8bND9rdEyU=
 github.com/d3code/clog v0.0.0-20230930052527-683e18a3d08d/go.mod h1:htSVLvXJJRBj6RVdUVYLHIrpvrh4MvAVtvIn6EkjtrE=
-github.com/d3code/pkg v0.0.0-20230930052751-bb1990e3b554 h1:8iNvgVJtbDtpgba1JBD0tdrVZopA/1yDtFyFKA6xUnI=
-github.com/d3code/pkg v0.0.0-20230930052751-bb1990e3b554/go.mod h1:MwgUqtuv7zEI+nUnvAqRxIYEqIOV5C7o2Lg811tiV2o=
+github.com/d3code/pkg v0.0.0-20230930071117-b4c11361435a h1:Lln3Gj9s5a8W4d8ZznqoNxHEab8p3dWl5OwSs4MZYps=
+github.com/d3code/pkg v0.0.0-20230930071117-b4c11361435a/go.mod h1:dgGEScxyjQs+9ymET/QXlRC/DexdvOZmNEACSWO/AuU=
